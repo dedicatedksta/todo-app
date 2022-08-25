@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import Input from './components/input/Input';
+import Todos from './components/todos/Todos';
+import { ITodo } from './types';
 
 function App() {
+
+  const [todos,setTodos]=useState<ITodo[]>(getTodos())
+
+  function getTodos(){
+    const todos=localStorage.getItem('todos')
+    return todos? JSON.parse(todos):[]
+  }
+  
+  useEffect(()=>{
+    localStorage.setItem('todos',JSON.stringify(todos))
+  },[todos])
+
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Input setTodos={setTodos}/>
+      <Todos setTodos={setTodos} todos={todos}/>
     </div>
   );
 }

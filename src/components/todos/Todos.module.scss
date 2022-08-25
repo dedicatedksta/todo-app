@@ -1,0 +1,5 @@
+.todos_wrapper{
+  @apply mt-8 bg-mainColor max-h-64;
+  overflow-y:overlay;
+  scrollbar-gutter: stable both-edges;
+}

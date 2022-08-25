@@ -1,0 +1,37 @@
+.todo{
+  @apply flex mx-4  pt-4 items-center text-lg text-white opacity-70 cursor-pointer;
+  >div{
+    @apply mr-2 mb-2 border-2 rounded-full border-bordercolor text-xl;
+    >svg{
+      @apply opacity-0 transition-all ease-in-out duration-300 rounded-full;
+    }
+  }
+
+  >span{
+    @apply flex justify-between border-b-2 pb-2 border-incomplete w-10/12 transition-all ease-in-out duration-300;
+  }
+}
+
+
+.last{
+  @apply border-none
+}
+
+.completed{
+  >span{
+    @apply line-through opacity-70 text-complete;
+  }
+  >div{
+    >svg{
+      @apply opacity-100 bg-bordercolor;
+    }
+  }
+}
+
+.trash{
+  @apply mb-2 text-lg fill-[#d384f8] transition-all ease-out duration-300;
+
+  &:hover{
+    @apply fill-bordercolor
+  }
+}
