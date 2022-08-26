@@ -1,0 +1,17 @@
+.indicator_wrapper {
+	@apply flex justify-between pl-4 bg-mainColor py-1 pr-2 text-sm text-white font-thin border border-bordercolor;
+}
+
+.indicator_wrapper >div{
+  @apply flex gap-2;
+
+}
+
+.indicator_wrapper>div>button{
+  @apply transition-all ease-in-out duration-200;
+  
+}
+
+.indicator_wrapper>div>button:hover{
+  @apply text-[#d384f8];
+}

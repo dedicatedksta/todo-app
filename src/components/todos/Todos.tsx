@@ -2,7 +2,7 @@ import React, { FC, useEffect, useMemo, useState } from "react";
 import { ITodo } from "../../types";
 import Indicator from "../indicator/Indicator";
 import Todo from "../todo/Todo";
-import styles from "./Todos.module.scss"
+import styles from "./Todos.module.css"
 import { AnimatePresence, motion } from "framer-motion";
 
 interface TodosProps{

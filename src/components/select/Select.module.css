@@ -1,0 +1,15 @@
+.select_wrapper {
+	@apply bg-mainColor outline-none appearance-none pl-2 rounded-xl cursor-pointer transition-all ease-in-out duration-200;
+}
+
+.select_wrapper:hover{
+  @apply text-[#d384f8];
+}
+
+.select_wrapper>option{
+  @apply text-[#d384f8];
+}
+
+.select_wrapper>option:checked{
+  @apply text-bordercolor;
+}

@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import {BsArrow90DegDown} from "react-icons/bs"
 import { ITodo } from "../../types";
-import styles from "./Input.module.scss"
+import styles from "./Input.module.css"
 import {nanoid} from "nanoid"
 
 interface InputProps{

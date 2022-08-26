@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import {BsCheck} from "react-icons/bs"
 import { ITodo } from "../../types";
-import styles from "./Todo.module.scss"
+import styles from "./Todo.module.css"
 import {IoMdTrash} from "react-icons/io"
 import { motion } from "framer-motion";
 

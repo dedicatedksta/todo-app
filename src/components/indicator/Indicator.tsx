@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useState } from "react";
 import { ITodo } from "../../types";
 import Select from "../select/Select";
-import styles from "./Indicator.module.scss"
+import styles from "./Indicator.module.css"
 
 interface IndicatorProps{
   itemLength:number,
