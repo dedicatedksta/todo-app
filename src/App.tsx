@@ -5,34 +5,34 @@ import { ITodo } from './types';
 
 function App() {
 
-  const [todos,setTodos]=useState<ITodo[]>(getTodos())
-  const [sort,setSort]=useState<string>('all')
+  const [todos, setTodos] = useState<ITodo[]>(getTodos())
+  const [sort, setSort] = useState<string>('all')
 
-  function getTodos(){
-    const todos=localStorage.getItem('todos')
-    return todos? JSON.parse(todos):[]
+  function getTodos() {
+    const todos = localStorage.getItem('todos')
+    return todos ? JSON.parse(todos) : []
   }
-  
-  useEffect(()=>{
-    localStorage.setItem('todos',JSON.stringify(todos))
-  },[todos])
 
-  const sortedPosts=useMemo(()=>{
-    switch(sort){
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos))
+  }, [todos])
+
+  const sortedPosts = useMemo(() => {
+    switch (sort) {
       case 'all':
         return todos
       case 'complete':
-        return todos.filter(t=>t.completed)
+        return todos.filter(t => t.completed)
       case 'incomplete':
-        return todos.filter(t=>!t.completed)
+        return todos.filter(t => !t.completed)
     }
-  },[todos,sort])
- 
- 
+  }, [todos, sort])
+
+
   return (
     <div className="App">
-      <Input setTodos={setTodos}/>
-      <Todos setTodos={setTodos} todos={sortedPosts!} sort={sort} setSort={setSort}/>
+      <Input setTodos={setTodos} />
+      <Todos setTodos={setTodos} todos={sortedPosts!} sort={sort} setSort={setSort} />
     </div>
   );
 }

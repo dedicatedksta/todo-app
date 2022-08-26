@@ -1,23 +1,23 @@
-.input_wrapper{
-  @apply flex items-center bg-mainColor max-w-2xl h-9  rounded-3xl text-white  ;
+.input_wrapper {
+	@apply flex items-center bg-mainColor max-w-2xl h-9  rounded-3xl text-white;
 
-  &:focus-within{
-    >input,.icon{
-      @apply opacity-100
-    }
-  }
+	&:focus-within {
+		> input,
+		.icon {
+			@apply opacity-100;
+		}
+	}
 
-  >input{
-    @apply bg-transparent pl-6 border-none outline-none opacity-50 h-full  text-xl transition-opacity ease-in-out duration-200 ;
-    
-  }
+	> input {
+		@apply bg-transparent pl-6 border-none outline-none opacity-50 h-full  text-xl transition-opacity ease-in-out duration-200;
+	}
 
-  >button{
-    @apply  text-white  bg-green-600 h-full  px-4 justify-self-end  rounded-r-3xl;
-  }
+	> button {
+		@apply text-white  bg-green-600 h-full  px-4 justify-self-end  rounded-r-3xl;
+	}
 }
 
-.icon{
-  transform: scale(-1,1);
-  @apply font-extrabold opacity-60 text-xl transition-opacity ease-in-out duration-200;
+.icon {
+	transform: scale(-1, 1);
+	@apply font-extrabold opacity-60 text-xl transition-opacity ease-in-out duration-200;
 }

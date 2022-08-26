@@ -1,14 +1,13 @@
-.indicator_wrapper{
-  @apply flex justify-between pl-4 bg-mainColor py-1 pr-2 text-sm text-white font-thin border border-bordercolor;
+.indicator_wrapper {
+	@apply flex justify-between pl-4 bg-mainColor py-1 pr-2 text-sm text-white font-thin border border-bordercolor;
 
-  >div{
-    @apply flex gap-2;
-    >button{
-      @apply transition-all ease-in-out duration-200;
-      &:hover{
-        @apply text-[#d384f8]
-      }
-    }
-  }
+	> div {
+		@apply flex gap-2;
+		> button {
+			@apply transition-all ease-in-out duration-200;
+			&:hover {
+				@apply text-[#d384f8];
+			}
+		}
+	}
 }
-
