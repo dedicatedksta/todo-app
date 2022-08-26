@@ -7,23 +7,17 @@ import { AnimatePresence, motion } from "framer-motion";
 
 interface TodosProps{
   todos:ITodo[],
-  setTodos:React.Dispatch<React.SetStateAction<ITodo[]>>;
+  setTodos:React.Dispatch<React.SetStateAction<ITodo[]>>,
+  sort:string,
+  setSort:React.Dispatch<React.SetStateAction<string>>
 }
 
-const Todos:FC<TodosProps> = ({todos,setTodos}) => {
+const Todos:FC<TodosProps> = ({todos,setTodos,sort,setSort}) => {
   
   const clearTodos=()=>{
     setTodos([])
   }
 
-  const completeTodos=()=>{
-    setTodos(prev=>{
-      const newTodos=prev.map(todo=>{
-        return {...todo,completed:true}
-      })
-      return newTodos
-    })
-  }
 
   return <>
     <ul className={styles.todos_wrapper}>
@@ -34,7 +28,7 @@ const Todos:FC<TodosProps> = ({todos,setTodos}) => {
         )}
       </AnimatePresence>
     </ul>
-    <Indicator completeTodos={completeTodos}  clearTodos={clearTodos} itemLength={todos.length}/>
+    <Indicator sort={sort} setSort={setSort}  clearTodos={clearTodos} itemLength={todos.length}/>
   </>
 };
 
