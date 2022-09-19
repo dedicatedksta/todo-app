@@ -3,3 +3,10 @@
 	overflow-y: overlay;
 	scrollbar-gutter: stable both-edges;
 }
+
+@-moz-document url-prefix() {
+	.todos_wrapper {
+		overflow-y: auto;
+		scrollbar-width: none;
+	}
+}
