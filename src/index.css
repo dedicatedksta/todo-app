@@ -24,7 +24,7 @@ code {
 }
 
 .App {
-	@apply scale-110;
+	@apply scale-95 sm:scale-110;
 }
 
 ::-webkit-scrollbar {
